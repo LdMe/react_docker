@@ -1,0 +1,35 @@
+# pull the base image
+
+FROM node:alpine
+
+
+# set the working direction
+
+WORKDIR /project/app/first-project
+
+
+# add `/project/app/first-project/node_modules/.bin` to $PATH
+
+ENV PATH /project/app/first-project/node_modules/.bin:$PATH
+
+
+# install app dependencies
+
+#COPY package.json ./
+
+
+#COPY package-lock.json ./
+
+
+#RUN npm install
+
+
+# add app
+
+#COPY . ./project
+
+
+# start app
+
+CMD ["npm", "start"]
+#CMD /bin/sh ; sleep infinity

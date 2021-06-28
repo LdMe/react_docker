@@ -1,0 +1,7 @@
+services:
+  react:
+    image: react
+    volumes:
+      - ~/React/first_project:/project
+    ports:
+      - "5000:3000"
